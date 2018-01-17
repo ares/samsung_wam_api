@@ -1,0 +1,41 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://192.168.22.144:55001/UIC?cmd=%3Cname%3EGetVolume%3C/name%3E
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - 192.168.22.144:55001
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 17 Jan 2018 19:01:50 GMT
+      Server:
+      - Samsung/1.0
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '223'
+      Connection:
+      - close
+      Last-Modified:
+      - Wed, 17 Jan 2018 19:01:50 GMT
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><UIC><method>VolumeLevel</method><version>1.0</version><speakerip>192.168.22.144</speakerip><user_identifier></user_identifier><response
+        result="ok"><volume>16</volume></response></UIC>
+    http_version: 
+  recorded_at: Wed, 17 Jan 2018 19:01:51 GMT
+recorded_with: VCR 4.0.0
