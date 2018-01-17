@@ -16,15 +16,15 @@ module SamsungWamApi
 
     # returns '1' (on) or '0' (off)
     def power_status
-      command!('<name>GetPowerStatus</name>')['powerStatus']
+      command!('<name>GetPowerStatus</name>')['powerStatus'].to_i
     end
 
     def on?
-      power_status == '1'
+      power_status == 1
     end
 
     def off?
-      power_status == '0'
+      power_status == 0
     end
 
     def on!
@@ -33,6 +33,22 @@ module SamsungWamApi
 
     def off!
       command!('<name>SetPowerStatus</name><p type="dec" name="powerstatus" val="0"/>')
+    end
+
+    def volume
+      command!('<name>GetVolume</name>')['volume'].to_i
+    end
+
+    def set_volume(vol)
+      command!('<name>SetVolume</name><p type="dec" name="Volume" val="' + vol.to_i.to_s + '"/>')
+    end
+
+    def increase_volume(step = 1)
+      set_volume(volume + step.to_i)
+    end
+
+    def decrease_volume(step = 1)
+      set_volume(volume - step.to_i)
     end
 
     def command!(cmd)
