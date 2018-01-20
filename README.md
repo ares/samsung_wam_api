@@ -23,8 +23,13 @@ Or install it yourself as:
 ```ruby
 require 'samsung_wam_api'
 living_room_soundbar = SamsungWamApi::Device.new(ip: 192.168.0.1)
-living_room_soundbar.power_on
-living_room_soundbat.volume_up
+living_room_soundbar.off? # => true
+living_room_soundbar.on!
+living_room_soundbar.volume # => 15
+living_room_soundbar.increase_volume
+living_room_soundbar.decrease_volume(5) # decrease by 5 instead of default 1
+living_room_soundbar.set_volume(20)
+
 ```
 
 ## Development
