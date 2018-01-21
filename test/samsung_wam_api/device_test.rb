@@ -77,5 +77,19 @@ module SamsungWamApi
        assert_equal 20, @device.volume
      end
    end
+
+   def test_mute_features
+     VCR.use_cassette 'unmuted' do
+       refute @device.muted?
+       @device.mute!
+       assert @device.muted?
+       @device.unmute!
+       refute @device.muted?
+       @device.toggle_mute!
+       assert @device.muted?
+       @device.toggle_mute!
+       refute @device.muted?
+     end
+   end
  end
 end

@@ -29,6 +29,10 @@ living_room_soundbar.volume # => 15
 living_room_soundbar.increase_volume
 living_room_soundbar.decrease_volume(5) # decrease by 5 instead of default 1
 living_room_soundbar.set_volume(20)
+living_room_soundbar.muted? # => false
+living_room_soundbar.mute!
+living_room_soundbar.unmute!
+living_room_soundbar.toggle_mute!
 
 ```
 

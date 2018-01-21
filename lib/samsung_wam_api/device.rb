@@ -51,6 +51,26 @@ module SamsungWamApi
       set_volume(volume - step.to_i)
     end
 
+    def mute_status
+      command!('UIC?cmd=<name>GetMute</name>')['mute']
+    end
+
+    def muted?
+      mute_status == 'on'
+    end
+
+    def mute!
+      command!('<name>SetMute</name><p type="str" name="mute" val="on"/>')
+    end
+
+    def unmute!
+      command!('<name>SetMute</name><p type="str" name="mute" val="off"/>')
+    end
+
+    def toggle_mute!
+      muted? ? unmute! : mute!
+    end
+
     def command!(cmd)
       query = "http://#{@ip}:#{@port}/#{@endpoint}?cmd=#{URI.encode(cmd)}"
       @logger.debug { "Firing query '#{URI.decode(query)}'" }
