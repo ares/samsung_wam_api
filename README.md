@@ -22,7 +22,7 @@ Or install it yourself as:
 
 ```ruby
 require 'samsung_wam_api'
-living_room_soundbar = SamsungWamApi::Device.new(ip: 192.168.0.1)
+living_room_soundbar = SamsungWamApi::Device.new(ip: '192.168.0.1')
 living_room_soundbar.off? # => true
 living_room_soundbar.on!
 living_room_soundbar.volume # => 15
@@ -33,6 +33,12 @@ living_room_soundbar.muted? # => false
 living_room_soundbar.mute!
 living_room_soundbar.unmute!
 living_room_soundbar.toggle_mute!
+living_room_soundbar.input
+living_room_soundbar.set_input!('aux')
+living_room_soundbar.cloud_provider_info
+living_room_soundbar.play_info
+living_room_soundbar.audio_info
+living_room_soundbar.cloud_username
 
 ```
 

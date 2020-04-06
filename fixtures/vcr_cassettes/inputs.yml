@@ -1,0 +1,269 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://192.168.22.144:55001/UIC?cmd=%3Cname%3EGetFunc%3C/name%3E
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - 192.168.22.144:55001
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 06 Apr 2020 18:27:22 GMT
+      Server:
+      - Samsung/1.0
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '274'
+      Connection:
+      - close
+      Last-Modified:
+      - Mon, 06 Apr 2020 18:27:22 GMT
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><UIC><method>CurrentFunc</method><version>1.0</version><speakerip>192.168.22.144</speakerip><user_identifier></user_identifier><response
+        result="ok"><function>aux</function><submode></submode><connection>on</connection></response></UIC>
+    http_version: 
+  recorded_at: Mon, 06 Apr 2020 18:27:24 GMT
+- request:
+    method: get
+    uri: http://192.168.22.144:55001/UIC?cmd=%3Cname%3ESetFunc%3C/name%3E%3Cp%20type=%22str%22%20name=%22function%22%20val=%22wifi%22/%3E
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - 192.168.22.144:55001
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 06 Apr 2020 18:27:23 GMT
+      Server:
+      - Samsung/1.0
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '258'
+      Connection:
+      - close
+      Last-Modified:
+      - Mon, 06 Apr 2020 18:27:23 GMT
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><UIC><method>CurrentFunc</method><version>1.0</version><speakerip>192.168.22.144</speakerip><user_identifier>public</user_identifier><response
+        result="ok"><function>wifi</function><submode>dlna</submode></response></UIC>
+    http_version: 
+  recorded_at: Mon, 06 Apr 2020 18:27:24 GMT
+- request:
+    method: get
+    uri: http://192.168.22.144:55001/UIC?cmd=%3Cname%3EGetFunc%3C/name%3E
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - 192.168.22.144:55001
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 06 Apr 2020 18:27:23 GMT
+      Server:
+      - Samsung/1.0
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '252'
+      Connection:
+      - close
+      Last-Modified:
+      - Mon, 06 Apr 2020 18:27:23 GMT
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><UIC><method>CurrentFunc</method><version>1.0</version><speakerip>192.168.22.144</speakerip><user_identifier></user_identifier><response
+        result="ok"><function>wifi</function><submode>dlna</submode></response></UIC>
+    http_version: 
+  recorded_at: Mon, 06 Apr 2020 18:27:24 GMT
+- request:
+    method: get
+    uri: http://192.168.22.144:55001/UIC?cmd=%3Cname%3ESetFunc%3C/name%3E%3Cp%20type=%22str%22%20name=%22function%22%20val=%22bt%22/%3E
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - 192.168.22.144:55001
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 06 Apr 2020 18:27:23 GMT
+      Server:
+      - Samsung/1.0
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '298'
+      Connection:
+      - close
+      Last-Modified:
+      - Mon, 06 Apr 2020 18:27:23 GMT
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><UIC><method>CurrentFunc</method><version>1.0</version><speakerip>192.168.22.144</speakerip><user_identifier>public</user_identifier><response
+        result="ok"><function>bt</function><connection>off</connection><devicename><![CDATA[]]></devicename></response></UIC>
+    http_version: 
+  recorded_at: Mon, 06 Apr 2020 18:27:25 GMT
+- request:
+    method: get
+    uri: http://192.168.22.144:55001/UIC?cmd=%3Cname%3EGetFunc%3C/name%3E
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - 192.168.22.144:55001
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 06 Apr 2020 18:27:24 GMT
+      Server:
+      - Samsung/1.0
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '292'
+      Connection:
+      - close
+      Last-Modified:
+      - Mon, 06 Apr 2020 18:27:24 GMT
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><UIC><method>CurrentFunc</method><version>1.0</version><speakerip>192.168.22.144</speakerip><user_identifier></user_identifier><response
+        result="ok"><function>bt</function><connection>off</connection><devicename><![CDATA[]]></devicename></response></UIC>
+    http_version: 
+  recorded_at: Mon, 06 Apr 2020 18:27:25 GMT
+- request:
+    method: get
+    uri: http://192.168.22.144:55001/UIC?cmd=%3Cname%3ESetFunc%3C/name%3E%3Cp%20type=%22str%22%20name=%22function%22%20val=%22aux%22/%3E
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - 192.168.22.144:55001
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 06 Apr 2020 18:27:29 GMT
+      Server:
+      - Samsung/1.0
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '280'
+      Connection:
+      - close
+      Last-Modified:
+      - Mon, 06 Apr 2020 18:27:29 GMT
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><UIC><method>CurrentFunc</method><version>1.0</version><speakerip>192.168.22.144</speakerip><user_identifier>public</user_identifier><response
+        result="ok"><function>aux</function><submode></submode><connection>on</connection></response></UIC>
+    http_version: 
+  recorded_at: Mon, 06 Apr 2020 18:27:30 GMT
+- request:
+    method: get
+    uri: http://192.168.22.144:55001/UIC?cmd=%3Cname%3EGetFunc%3C/name%3E
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - 192.168.22.144:55001
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 06 Apr 2020 18:27:34 GMT
+      Server:
+      - Samsung/1.0
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '274'
+      Connection:
+      - close
+      Last-Modified:
+      - Mon, 06 Apr 2020 18:27:34 GMT
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><UIC><method>CurrentFunc</method><version>1.0</version><speakerip>192.168.22.144</speakerip><user_identifier></user_identifier><response
+        result="ok"><function>aux</function><submode></submode><connection>on</connection></response></UIC>
+    http_version: 
+  recorded_at: Mon, 06 Apr 2020 18:27:35 GMT
+recorded_with: VCR 4.0.0

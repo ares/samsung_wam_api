@@ -5,6 +5,14 @@ require 'logger'
 require 'timeout'
 
 module SamsungWamApi
+  INPUTS = {
+    'bt' => 'Bluetooth',
+    'hdmi' => 'HDMI',
+    'wifi' => 'WiFi',
+    'optical' => 'WiFi',
+    'aux' => 'AUX',
+  }
+
   class Device
     def initialize(ip:, port: '55001', endpoint: 'UIC', logger: Logger.new(STDOUT), timeout_seconds: 3)
       @ip = ip
@@ -52,7 +60,7 @@ module SamsungWamApi
     end
 
     def mute_status
-      command!('UIC?cmd=<name>GetMute</name>')['mute']
+      command!('<name>GetMute</name>')['mute']
     end
 
     def muted?
@@ -71,8 +79,41 @@ module SamsungWamApi
       muted? ? unmute! : mute!
     end
 
-    def command!(cmd)
-      query = "http://#{@ip}:#{@port}/#{@endpoint}?cmd=#{URI.encode(cmd)}"
+    def input
+      command!('<name>GetFunc</name>')['function']
+    end
+
+    def set_input!(input)
+      unless INPUTS.keys.include?(input)
+        @logger.error "Unsupported input #{input}, ignoring and failing"
+        return false
+      end
+
+      command!('<name>SetFunc</name><p type="str" name="function" val="' + input + '"/>')
+    end
+
+    def cloud_provider_info
+      command!('<name>GetCpInfo</name>', 'CPM')
+    end
+
+    def audio_info
+      info = cloud_provider_info
+      info['audioinfo']
+    end
+
+    def play_info
+      info = cloud_provider_info
+      info['playstatus']
+    end
+
+    def cloud_username
+      info = cloud_provider_info
+      info['username']
+    end
+
+    def command!(cmd, endpoint = nil)
+      endpoint ||= @endpoint
+      query = "http://#{@ip}:#{@port}/#{endpoint}?cmd=#{URI.encode(cmd)}"
       @logger.debug { "Firing query '#{URI.decode(query)}'" }
 
       # if we e.g. request to power on device which is already on, we never receive a response, therefore we use configurable timeout
@@ -82,7 +123,7 @@ module SamsungWamApi
       }
       parsed_response = Hash.from_xml(raw_response)
       @logger.debug { "Got response:\n #{raw_response.inspect} \nparsed to:\n#{parsed_response}" }
-      parsed_response[@endpoint]['response']
+      parsed_response[endpoint]['response']
     rescue Timeout::Error
       @logger.warn "Timeout and #{@timeout_seconds} seconds, you most likely did invalid operation"
     end

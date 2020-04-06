@@ -91,5 +91,37 @@ module SamsungWamApi
        refute @device.muted?
      end
    end
+
+   def test_inputs_changing
+     VCR.use_cassette 'inputs' do
+       assert_equal 'aux', @device.input
+       @device.set_input!('wifi')
+       assert_equal 'wifi', @device.input
+       @device.set_input!('bt')
+       assert_equal 'bt', @device.input
+       sleep 5 # starting BT takes a sec, it ignores set_input meanwhile
+       @device.set_input!('aux')
+       assert_equal 'aux', @device.input
+     end
+     refute @device.set_input!('whatever')
+   end
+
+   def test_cloud_prodiver_info
+     VCR.use_cassette 'cloud_playing' do
+       assert_equal 'Spotify', @device.cloud_provider_info['cpname']
+       assert_equal 'tester', @device.cloud_username
+       assert_equal "For What It's Worth", @device.audio_info['title']
+       assert_equal 'play', @device.play_info
+     end
+   end
+
+   def test_cloud_disconnected
+     VCR.use_cassette 'cloud_disconnected' do
+       assert_equal 'Spotify', @device.cloud_provider_info['cpname']
+       assert_nil @device.cloud_username
+       assert_nil @device.audio_info
+       assert_nil @device.play_info
+     end
+   end
  end
 end

@@ -1,0 +1,199 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://192.168.22.144:55001/CPM?cmd=%3Cname%3EGetCpInfo%3C/name%3E
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - 192.168.22.144:55001
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 06 Apr 2020 19:14:56 GMT
+      Server:
+      - Samsung/1.0
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '555'
+      Connection:
+      - close
+      Last-Modified:
+      - Mon, 06 Apr 2020 19:14:56 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?><CPM><method>CpInfo</method><version>0.1</version><speakerip>192.168.22.144</speakerip><user_identifier>public</user_identifier><response result="ok">
+            <cpname>Spotify</cpname>
+            <timestamp>2020-04-06T18:52:22Z</timestamp>
+            <signinstatus>1</signinstatus>
+            <username>tester</username>
+            <playstatus>play</playstatus>
+            <audioinfo>
+                <title>For What It's Worth</title>
+                <thumbnail>http://o.scdn.co/640/ab67616d00001e02c875f772b3e01748ffd5c0d2</thumbnail>
+            </audioinfo>
+        </response>
+        </CPM>
+    http_version: 
+  recorded_at: Mon, 06 Apr 2020 19:14:57 GMT
+- request:
+    method: get
+    uri: http://192.168.22.144:55001/CPM?cmd=%3Cname%3EGetCpInfo%3C/name%3E
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - 192.168.22.144:55001
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 06 Apr 2020 19:14:56 GMT
+      Server:
+      - Samsung/1.0
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '555'
+      Connection:
+      - close
+      Last-Modified:
+      - Mon, 06 Apr 2020 19:14:56 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?><CPM><method>CpInfo</method><version>0.1</version><speakerip>192.168.22.144</speakerip><user_identifier>public</user_identifier><response result="ok">
+            <cpname>Spotify</cpname>
+            <timestamp>2020-04-06T18:52:22Z</timestamp>
+            <signinstatus>1</signinstatus>
+            <username>tester</username>
+            <playstatus>play</playstatus>
+            <audioinfo>
+                <title>For What It's Worth</title>
+                <thumbnail>http://o.scdn.co/640/ab67616d00001e02c875f772b3e01748ffd5c0d2</thumbnail>
+            </audioinfo>
+        </response>
+        </CPM>
+    http_version: 
+  recorded_at: Mon, 06 Apr 2020 19:14:57 GMT
+- request:
+    method: get
+    uri: http://192.168.22.144:55001/CPM?cmd=%3Cname%3EGetCpInfo%3C/name%3E
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - 192.168.22.144:55001
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 06 Apr 2020 19:14:56 GMT
+      Server:
+      - Samsung/1.0
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '555'
+      Connection:
+      - close
+      Last-Modified:
+      - Mon, 06 Apr 2020 19:14:56 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?><CPM><method>CpInfo</method><version>0.1</version><speakerip>192.168.22.144</speakerip><user_identifier>public</user_identifier><response result="ok">
+            <cpname>Spotify</cpname>
+            <timestamp>2020-04-06T18:52:22Z</timestamp>
+            <signinstatus>1</signinstatus>
+            <username>tester</username>
+            <playstatus>play</playstatus>
+            <audioinfo>
+                <title>For What It's Worth</title>
+                <thumbnail>http://o.scdn.co/640/ab67616d00001e02c875f772b3e01748ffd5c0d2</thumbnail>
+            </audioinfo>
+        </response>
+        </CPM>
+    http_version: 
+  recorded_at: Mon, 06 Apr 2020 19:14:57 GMT
+- request:
+    method: get
+    uri: http://192.168.22.144:55001/CPM?cmd=%3Cname%3EGetCpInfo%3C/name%3E
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - 192.168.22.144:55001
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 06 Apr 2020 19:14:56 GMT
+      Server:
+      - Samsung/1.0
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '555'
+      Connection:
+      - close
+      Last-Modified:
+      - Mon, 06 Apr 2020 19:14:56 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?><CPM><method>CpInfo</method><version>0.1</version><speakerip>192.168.22.144</speakerip><user_identifier>public</user_identifier><response result="ok">
+            <cpname>Spotify</cpname>
+            <timestamp>2020-04-06T18:52:22Z</timestamp>
+            <signinstatus>1</signinstatus>
+            <username>tester</username>
+            <playstatus>play</playstatus>
+            <audioinfo>
+                <title>For What It's Worth</title>
+                <thumbnail>http://o.scdn.co/640/ab67616d00001e02c875f772b3e01748ffd5c0d2</thumbnail>
+            </audioinfo>
+        </response>
+        </CPM>
+    http_version: 
+  recorded_at: Mon, 06 Apr 2020 19:14:57 GMT
+recorded_with: VCR 4.0.0
