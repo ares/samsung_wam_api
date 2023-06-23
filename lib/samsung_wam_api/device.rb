@@ -1,6 +1,6 @@
 require 'uri'
 require 'net/http'
-require 'active_support/core_ext/hash/conversions'
+require 'active_support'
 require 'logger'
 require 'timeout'
 
