@@ -113,7 +113,7 @@ module SamsungWamApi
 
     def command!(cmd, endpoint = nil)
       endpoint ||= @endpoint
-      query = "http://#{@ip}:#{@port}/#{endpoint}?cmd=#{URI.encode(cmd)}"
+      query = "http://#{@ip}:#{@port}/#{endpoint}?cmd=#{URI::Parser.new.escape(cmd)}"
       @logger.debug { "Firing query '#{URI.decode(query)}'" }
 
       # if we e.g. request to power on device which is already on, we never receive a response, therefore we use configurable timeout
