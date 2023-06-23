@@ -30,4 +30,5 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'activesupport'
   spec.add_dependency 'libxml-ruby'
+  spec.add_dependency 'rexml'
 end
